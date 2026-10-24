@@ -1,0 +1,32 @@
+HOW TO USE: brain-get
+======================
+
+PURPOSE
+  Fetch the complete, untruncated content, tags, status, and metadata of a
+  single Second Brain memory using its entry ID.
+
+CAPABILITIES
+  - Retrieves full raw text without truncation ellipses
+  - Shows full metadata: tags, lifecycle status (canonical/draft/deprecated), source, created/updated timestamps
+  - Instant read-only execution
+
+USE CASES
+  - A `/brain-recall` search returned an entry ending in `[truncated ...]`
+  - You know a memory ID and want to inspect the complete spec or code snippet
+  - Checking the exact date and details of a recorded decision
+
+IDEAS
+  - Use immediately after `/brain-recall` or `/brain-recent` whenever an entry has more text than the preview shows
+
+PROMPTS YOU CAN PASTE
+  /brain-get mem_8f93a1
+
+  /brain-get mem_abc123
+
+EXAMPLE FLOW
+  You: /brain-get mem_8f93a1
+  Agent: [Calls second-brain MCP get tool and renders full memory text and metadata in chat]
+
+DEFAULT GOALS IF YOU DON'T NAME ONE
+  1. Retrieve full untruncated content for the specified ID
+  2. Display content, timestamps, tags, and lifecycle status
